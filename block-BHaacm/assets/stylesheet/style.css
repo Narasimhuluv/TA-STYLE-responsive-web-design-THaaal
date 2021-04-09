@@ -1,0 +1,221 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html{
+    font-size: 16px;
+}
+body {
+	line-height: 1;
+}
+html{
+    scroll-behavior: smooth;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+:root{
+    --primary:rgb(34,41,70);
+}
+/* -------------------custom styles */
+.container{
+    max-width: 1600px;
+    width: 100%;
+    margin: auto;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+.flex_48{
+    flex: 0 1 48%;
+}
+.flex_30{
+    flex: 0 1 30%;
+}
+.full_width{
+    width: 100%;
+}
+.hero_img{
+    height: 100%;
+}
+.padding{
+    padding: 20px 50px;
+}
+
+.items_align{
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+}
+
+/* ---------------HEADER STYLING */
+
+.header{
+    width: 100%;
+    padding: 1em 0;
+    background-color: var(--primary);
+}
+.header .active{
+    color: green;
+}
+.nav a{
+    margin-left: 2em;
+    font-size: 1.5em;
+    color: white;
+}
+.header .nav a:hover{
+    color: green;
+}
+/* -------------------LOREM IPSUM SECTION */
+.hero{
+    background-color: rgb(233,236,252);
+    padding: 4em 0;
+}
+.lorem_ipsum_left .hero_heading{
+    font-size: 4em;
+    font-weight: 900;
+}
+.lorem_ipsum_left .hero_para, .our_blog .para{
+    font-size: 1.5em;
+    line-height: 1.3;
+    color: grey;
+    margin: 1em 0;
+}
+.btn{
+    width: 10em;
+    height: 3.5em;
+    background: none;
+    background-color: green;
+    border: none;
+}
+/* ----------------OUR BLOG SECTION */
+.our_blog{
+    margin: 4em 0;
+}
+.our_blog h2{
+    text-align: center;
+    font-size: 4em;
+    margin: 1em 0;
+    font-weight: 700;
+}
+.our_blog h3{
+    font-size: 2em;
+    font-weight: 600;
+}
+.our_blog .para{
+    font-size: 1.1em;
+}
+
+/* -----------------FOOTER SECTION */
+footer {
+    background-color: var(--primary);
+    color: grey;
+}
+footer nav a{
+    color: grey;
+    margin-left: 1.2em;
+    font-size: 2.5em;
+}
+footer small{
+    font-size: 1.5em;
+    font-weight: 900;
+}
+/* --------------------media queries */
+
+@media screen and (max-width: 768px) {
+    html{
+        font-size: 12px;
+    }
+    .flex{
+        flex-wrap: wrap;
+    }
+    .flex_48{
+        flex: 0 1 100%;
+        margin: 1em 0;
+        padding: 10px 20px;
+    }
+   
+    .flex_30{
+        margin: 1em 0;
+    }
+    .our_blog{
+        margin: 1em;
+    }
+    .our_blog h2{
+        font-size: 2em;
+        margin-bottom: 0.5em;
+    }
+    .our_blog h3{
+        font-size: 1.5em;
+        margin-top: 1em;
+    }
+    .flex_30{
+        flex: 0 1 100%;
+        margin: 1em;
+    } 
+    .hero .hero_heading{
+        font-size: 2.5em;
+    }
+    .hero .hero_para{
+        font-size: 1.2em;
+    }
+    .hero .flex{
+        flex-wrap: wrap-reverse; 
+    }
+    .column{
+        flex-direction: column;
+        line-height: 2;
+    }
+    .column a{
+        margin: 10px 10px;
+    }
+    footer .container{
+        padding: 10px 0;
+        font-size: 0.7em;
+    }
+    .padding{
+        padding: 0;
+    }
+}
